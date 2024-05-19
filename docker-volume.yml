@@ -1,0 +1,10 @@
+# /world is dir
+
+docker volume create hello
+
+docker run -d -v hello:/world busybox ls /world
+
+docker volume inspect hello
+
+
+docker volume ls

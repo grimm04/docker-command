@@ -1,0 +1,3 @@
+
+# PID container or name container
+docker logs -f PID

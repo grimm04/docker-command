@@ -1,0 +1,12 @@
+# -f filename 
+docker compose -f docker-compose.yml -f 
+# --dry-run for test mode
+docker compose --dry-run up --build -d
+
+# -p project name  
+docker compose -p my_project ps -a 
+
+docker compose -p my_project logs
+
+
+# https://docs.docker.com/reference/cli/docker/compose/

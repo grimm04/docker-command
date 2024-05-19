@@ -1,0 +1,13 @@
+
+# --name of container
+docker run --name test -d nginx:alpine
+
+docker stop test
+docker rm test
+
+#create
+docker container create -i -t --name myadminer adminer
+
+docker container start --attach -i myadminer
+#run 
+docker run -it --name myadminer adminer
