@@ -8,3 +8,9 @@ docker volume inspect hello
 
 
 docker volume ls
+
+# Run a Temporary Container:
+
+docker run --rm -it -v myvolume:/app/files busybox 
+cd /app/files
+ls -l

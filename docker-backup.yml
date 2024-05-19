@@ -1,0 +1,24 @@
+
+
+
+using bash
+#!/bin/bash
+# Create a tar archive of the files directory
+tar -czvf /app/backup/files_backup.tar.gz -C /app/files .
+
+chmod +x backup.sh
+
+
+# Dockerfile
+# Copy the rest of the working directory contents into the container
+COPY . .
+
+# Copy the backup script into the container
+COPY backup.sh .
+
+
+
+docker cp <container_id_or_name>:/app/files ./backup
+docker cp <container_id_or_name>:/app/backup/files_backup.tar.gz ./backup/files_backup.tar.gz
+
+ 
